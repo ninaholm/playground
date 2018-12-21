@@ -1,0 +1,36 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+	<form action="" method="post" name="lovecraftian">
+        {{ form.hidden_tag() }}
+        <p>
+            Lovecraft will finish your sentence:<br>
+
+            {{ form.thatswhatshesaid(size=80) }}
+            {% for error in form.thatswhatshesaid.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}<br>
+
+        </p>
+        <p><input type="submit" value="Let Lovecraft speak!"></p>
+    </form>
+
+
+    <form action="" method="post" name="lovecraftian">
+        {{ form.hidden_tag() }}
+        <p>
+            EL James (50 Shades) will finish your sentence:<br>
+
+            {{ form.thatswhatshesaid(size=80) }}
+            {% for error in form.thatswhatshesaid.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}<br>
+
+        </p>
+        <p><input type="submit" value="50 Shades of Holy Cow!"></p>
+    </form>
+
+
+{% endblock %}

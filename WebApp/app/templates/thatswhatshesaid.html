@@ -1,0 +1,38 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+    {% if validationButton is not none %}
+
+    <form action="/whatshesaidvalidation" method="post" name="validationButton">
+        <p>
+            Is this a good TWSS joke?<br>
+
+            {{ validationButton.isTwss(size=30, value="Yes") }}
+            {{ validationButton.isNotTwss(size=30, value="No") }}
+        </p>
+    </form>
+    {% endif %}
+
+
+    {% if form is not none %}
+	<form action="" method="post" name="whatshesaid">
+        {{ form.hidden_tag() }}
+        <p>
+            Please enter a sentence:<br>
+
+            {{ form.potentialTWSS(size=80) }}
+
+        </p>
+        <p><input type="submit" value="Evaluate"></p>
+    </form>
+    {% endif %}
+
+
+
+{% endblock %}
