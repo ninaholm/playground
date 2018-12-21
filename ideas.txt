@@ -1,0 +1,22 @@
+
+Generative model creating new idioms
+
+
+
+
+
+
+
+READING
+
+https://blog.keras.io/building-autoencoders-in-keras.html
+
+
+
+
+Image style transfer: 
+https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
+
+
+
+
